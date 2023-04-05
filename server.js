@@ -52,8 +52,6 @@ app.use((req, res, next) => {
   });
  })
  app.put('/updateuser/:id/:name', (req, res) => {
-  console.log(req.params.id,'idddddddddddssssssss')
-  console.log(req.params.name,'idddddddddddssssssss')
   User.findById(req.params.id, (err, user) => {
     if (!user)
       return next(new Error('Error getting the todo!'));
